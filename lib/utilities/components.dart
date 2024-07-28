@@ -1,9 +1,5 @@
 // ignore_for_file: must_be_immutable
-
-import 'dart:io';
 import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:internship_webapp/src/dimens.dart';
 import 'package:internship_webapp/src/palettes.dart';
