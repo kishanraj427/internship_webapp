@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:internship_webapp/screens/home_screen.dart';
+import 'package:internship_webapp/screens/home/home_screen.dart';
 import 'package:internship_webapp/src/constants.dart';
 
 NavigationRouterDelegate routerDelegate = NavigationRouterDelegate();
