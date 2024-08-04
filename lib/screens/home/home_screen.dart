@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:internship_webapp/navigation_routes.dart';
 import 'package:internship_webapp/screens/home/footer.dart';
 import 'package:internship_webapp/screens/home/header.dart';
 import 'package:internship_webapp/screens/home/services.dart';
@@ -68,7 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(width: Dimens.fiveXs),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    routerDelegate.pushPage(name: '/search');
+                  },
                   child: Text(
                     Strings.resources.toUpperCase(),
                     style: TextStyles.appBarActionStyle,
@@ -116,7 +119,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
-
-

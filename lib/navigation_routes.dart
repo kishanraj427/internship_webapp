@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:internship_webapp/screens/home/home_screen.dart';
+import 'package:internship_webapp/screens/search/search_resource.dart';
 import 'package:internship_webapp/src/constants.dart';
 
 NavigationRouterDelegate routerDelegate = NavigationRouterDelegate();
@@ -112,6 +113,8 @@ class NavigationRouterDelegate extends RouterDelegate<List<RouteSettings>>
     switch (settings.name) {
       case '/':
         return const MaterialPage(child: HomeScreen());
+      case "/search":
+        return const MaterialPage(name: "/search", child: SearchResource());
       default:
         return MaterialPage(
           child: Scaffold(

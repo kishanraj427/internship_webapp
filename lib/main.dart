@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:internship_webapp/navigation_parser.dart';
 import 'package:internship_webapp/navigation_routes.dart';
 import 'package:internship_webapp/src/constants.dart';
 import 'package:internship_webapp/src/theme.dart';
 import 'package:internship_webapp/utilities/common_utility.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
+void configureApp() {
+  setUrlStrategy(PathUrlStrategy());
+}
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureApp();
   runApp(const LandingPage());
 }
 
@@ -31,6 +38,7 @@ class _LandingPageState extends State<LandingPage> {
       key: Key(CommonUtility.generateId([])),
       theme: AppTheme.getTheme(),
       routerDelegate: routerDelegate,
+      routeInformationParser: const NavigationRouteInformationParser(),
     );
   }
 }

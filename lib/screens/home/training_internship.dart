@@ -5,6 +5,7 @@ import 'package:internship_webapp/src/strings.dart';
 import 'package:internship_webapp/src/text_style.dart';
 import 'package:internship_webapp/utilities/common_utility.dart';
 import 'package:internship_webapp/utilities/components.dart';
+import 'dart:html' as html;
 
 class TrainingInternshipSection extends StatelessWidget {
   const TrainingInternshipSection({super.key});
@@ -43,7 +44,11 @@ class TrainingInternshipSection extends StatelessWidget {
                         (states) => Palette.appColor),
                     elevation: WidgetStateProperty.resolveWith(
                         (states) => isHovered ? 10 : 7)),
-                onPressed: () {},
+                onPressed: () async {
+                  html.window.open(
+                      "https://docs.google.com/forms/d/e/1FAIpQLSc4DbTWNZfQozMkdKwXK7Q8A_1PbmTT7ikdGmnHrgBXqKW9QA/viewform",
+                      "Fusion Flow");
+                },
                 child: SizedBox(
                   width: Dimens.nineXl + 10,
                   height: Dimens.fiveXl + 5,
